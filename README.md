@@ -1,1 +1,1 @@
-Easy sample to set up nodemailer for future projects in react.
+Simple sample to help set up nodemailer for future projects in react.
