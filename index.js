@@ -22,17 +22,18 @@ app.post('/api/form', (req, res) => {
         `
 
         let transporter = nodemailer.createTransport({
-            host: "smtp.ethereal.email",
-            port: 587,
+            host: "smtp.ethereal.email",  //will be different for google
+            port: 587, //will be different for google
             auth: {
-                user: 'dorthy0@ethereal.email',
-                pass: 'zfpPbtVsYykcVtMFnt'
+                // recommend making these secrets
+                user: 'email',
+                pass: 'password'
             }
         })
 
         let mailOptions = {
             from: 'test@testaccount.com',
-            to: 'dorthy0@ethereal.email',
+            to: 'email',
             replyTo: 'test@testaccount.com',
             subject: 'New Message',
             text: req.body.message,
